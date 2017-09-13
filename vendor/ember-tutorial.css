@@ -302,6 +302,10 @@ p {
     height: initial;
     position: static;
 }
+
+.show-listing .description {
+    margin-top: 2em;
+}
 /**
  * Utilities
  */

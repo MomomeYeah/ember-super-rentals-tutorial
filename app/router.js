@@ -6,10 +6,13 @@ const Router = Ember.Router.extend({
   rootURL: config.rootURL
 });
 
+// index routes and subroutes don't appear by default
 Router.map(function() {
   this.route('about');
   this.route('contact');
-  this.route('rentals');
+  this.route('rentals', function() {
+    this.route('show', { path: '/:rental_id' });
+  });
 });
 
 export default Router;
